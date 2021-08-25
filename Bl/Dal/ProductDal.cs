@@ -30,7 +30,7 @@ namespace test.Bl.Dal
                 SqlParameter sqlParameter = new SqlParameter("@id", id);
                 string sqlQuery = "EXEC [dbo].[GetProducts] " + "@id";
 
-                products = (List<Product>)this.Set<Product>().FromSqlRaw(sqlQuery, sqlParameter);
+                products = (List<Product>)this.Set<Product>().FromSqlRaw(sqlQuery, sqlParameter);//convert drom db to class in dto class
             }
             catch (Exception ex)
             {
