@@ -1,0 +1,34 @@
+@import '../commonStyle.scss';
+
+.input-edit-product{
+  & input{
+    border: 0;
+    border-bottom: 1px solid;
+    width: 120px;
+    height: 15px;
+    text-overflow: ellipsis;
+    &:focus{
+      border:0;
+    }
+  }
+}
+.details-box{
+  display: flex;
+  flex-direction: column;
+  & div{
+    margin-top: 10px;
+  }
+
+  & h3{
+    color: $blue-color;
+  }
+}
+.editor-btn{
+  border: 0;
+  border-bottom: 1px solid $blue-color;
+  color: $blue-color;
+  svg{
+    width: 15px;
+  }
+}
+

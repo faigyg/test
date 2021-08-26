@@ -1,0 +1,26 @@
+$blue-color:#03417e;
+$light-blue:#d9eaea;
+
+@mixin center-flex {
+  justify-content: center;
+    display: flex;
+}
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+a {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}

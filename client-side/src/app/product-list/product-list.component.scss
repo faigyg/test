@@ -1,0 +1,23 @@
+@import '../commonStyle.scss';
+
+.content {
+  background-color: $light-blue;
+  width: 800px;
+}
+.title {
+  margin-top: 15px;
+  & h2 {
+    @include center-flex;
+    color: $blue-color;
+  }
+}
+.right-pipe {
+  border-right: 1px solid #847d7d;
+}
+.list{
+  @include center-flex;
+  flex-direction: column;;
+}
+.filter{
+  margin-left: 15px;
+}

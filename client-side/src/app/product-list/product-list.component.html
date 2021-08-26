@@ -1,0 +1,64 @@
+<div class="content">
+  <div class="row title" >
+    <div class="col-md-6 right-pipe"> 
+      <h2 >Filter</h2>
+    </div>
+    <div class="col-md-6">
+      <h2 >Products list</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 right-pipe">
+      <div class="filter"> 
+        <div>
+        filter by name : <input [(ngModel)]="filterName"/>
+        </div>
+        <div>
+        
+          filter by price  
+        
+        <ul>
+          <li *ngFor="let product of priceRangeList; let i = index">
+            <input type="checkbox" (change)="filterByPrice($event,i)" /> {{product}} 
+          </li>
+        </ul>
+        
+        </div>
+    </div>
+  </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="list">
+            <h5>active productd</h5>
+            <div *ngFor="let product of activeProducts  | myfilter:filterName">            
+                <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+                  {{ product.name }}
+                </a>               
+            </div>
+          </div>
+        </div>
+          <div class="col-md-6">
+            <div class="list">
+            <h5>inactive productd</h5>
+              <div *ngFor="let product of inActiveProducts | myfilter:filterName">
+                <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+                  {{ product.name }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

@@ -1,0 +1,96 @@
+<div class="details-box">
+  <div *ngIf="product" class="input-edit-product">
+    <h3> details to edit:</h3>
+    <div>
+      <span> product id:</span>
+      <input  [(ngModel)]="product.id"/>
+    </div>
+    <div>
+      <span> product name:</span>
+      <input [(ngModel)]="product.name"/>
+    </div>
+    <div>
+      <span>catalog number:</span>
+      <input  [(ngModel)]="product.catalogNumber"/>
+    </div>
+    <div>
+      <span>price:</span>
+      <input  [(ngModel)]="product.price"/>
+    </div>
+    <!--validation
+    
+    <div>
+      <span>price:</span>
+      <input  formControlName="price"/>
+    </div>
+  
+    <input type="text" id="price" name="price" class="form-control"
+                  minlength="4" 
+                  [(ngModel)]="product.price" #name="ngModel">
+    <div *ngIf="price.invalid && (price.dirty || price.touched)" >
+      <div *ngIf="price.errors?.pattern">
+      price required only numbers
+    </div>
+    
+    </div>
+    -->
+    <!--<h4>price: {{ product.price|currency}}</h4>-->
+    <div>
+      <span>amount of product:</span>
+      <input  [(ngModel)]="product.amount"/>
+    </div>
+    <div>
+      <span>is product active:</span>
+      <input  [(ngModel)]="product.isActive"/>
+    </div>
+  <div>
+
+      <button (click)="updateProductDetails()" class="editor-btn">
+    
+    <svg 
+      viewBox="0 0 383.947 383.947" >
+    <g>
+      <g>
+        <g>
+          <polygon points="0,303.947 0,383.947 80,383.947 316.053,147.893 236.053,67.893 			"/>
+          <path d="M377.707,56.053L327.893,6.24c-8.32-8.32-21.867-8.32-30.187,0l-39.04,39.04l80,80l39.04-39.04
+            C386.027,77.92,386.027,64.373,377.707,56.053z"/>
+        </g>
+      </g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    </svg>
+    update
+    </button>
+    </div>
+  </div>
+</div>
